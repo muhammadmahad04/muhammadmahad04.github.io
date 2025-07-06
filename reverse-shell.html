@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Reverse Shell in C – by Muhammad Mahad</title>
+  <meta name="description" content="A step-by-step breakdown of a custom reverse shell with keylogger and persistence, written in C by Muhammad Mahad.">
+  <meta name="keywords" content="reverse shell, C programming, malware, ethical hacking, Muhammad Mahad, persistence, keylogger, socket programming">
+</head>
+<body>
+  <h1>🛠️ Reverse Shell in C – by Muhammad Mahad</h1>
+  <p><strong>Date:</strong> July 6, 2025</p>
+
+  <h2>🔍 Project Overview</h2>
+  <p>This project demonstrates a fully functional reverse shell written in C, complete with persistence using Windows Registry and optional keylogging capabilities. It's intended for ethical and educational use only.</p>
+
+  <h2>📂 Files Included</h2>
+  <ul>
+    <li><strong>server.cpp</strong> – The listener that accepts commands and displays output</li>
+    <li><strong>client.c</strong> – The payload that connects back to the server and executes commands</li>
+  </ul>
+
+  <h2>📡 How It Works</h2>
+  <ol>
+    <li>The server runs and listens on a specified port (default: 50005)</li>
+    <li>The client connects to the server and sends a message (simulating a compromise)</li>
+    <li>The server can issue commands like:
+      <ul>
+        <li><code>cd</code> – change directory</li>
+        <li><code>persist</code> – add autorun entry in registry</li>
+        <li><code>keylog_start</code> – start keylogger (threaded)</li>
+        <li><code>q</code> – quit and close the connection</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>🧠 Key Features</h2>
+  <ul>
+    <li>✅ Custom socket handling using Winsock2 and POSIX</li>
+    <li>✅ Registry persistence using Windows API</li>
+    <li>✅ Keylogger support via threads</li>
+    <li>✅ Command execution with <code>_popen()</code></li>
+  </ul>
+
+  <h2>💻 Example Server Output</h2>
+  <pre>
+* Shell#192.168.1.6~$: whoami
+user-pc\mahad
+* Shell#192.168.1.6~$: persist
+Created Persistence At : HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+  </pre>
+
+  <h2>⚠️ Legal Disclaimer</h2>
+  <p>This reverse shell is for <strong>educational and authorized testing only</strong>. Do not use it on systems you don't own or have permission to test.</p>
+
+  <h2>📁 Source Code</h2>
+  <p>🔗 <a href="https://github.com/muhammadmahad04/reverse-shell">GitHub Repository</a></p>
+
+  <h2>🙋 Connect with Me</h2>
+  <p>
+    🔗 <a href="https://muhammadmahad04.github.io">Portfolio</a><br>
+    🔗 <a href="https://linkedin.com/in/muhammadmahad04">LinkedIn</a><br>
+    📧 muhammadmahad9191@gmail.com
+  </p>
+</body>
+</html>
