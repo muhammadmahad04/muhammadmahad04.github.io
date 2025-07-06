@@ -1,3 +1,4 @@
+<meta name="google-site-verification" content="YOUR_CODE_HERE" />
 ---
 layout: default
 ---
